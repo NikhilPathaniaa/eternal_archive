@@ -5,7 +5,7 @@ import { ArrowRight, Heart } from "lucide-react";
 import FloatingSymbols from "@/components/FloatingSymbols";
 import SacredGeometryBackground from "@/components/SacredGeometryBackground";
 import Link from "next/link";
-
+// test
 export default function Home() {
   return (
     <main className=" bg-white">
