@@ -7,6 +7,8 @@ import SacredGeometryBackground from "@/components/SacredGeometryBackground";
 import FloatingProblems from "@/components/FloatingProblems";
 import CreativeBackground from "@/components/CreativeBackground";
 import Link from "next/link";
+import ProblemsWeSolve from "@/components/ProblemsWeSolve";
+import KnowledgeCircle from "@/components/KnowledgeCircle";
 
 export default function Home() {
   return (
@@ -71,34 +73,14 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Problems Section */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-white via-[#FDF5D8]/20 to-white overflow-hidden">
-        <CreativeBackground />
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#4A3F35] mb-6">
-              A Knowledge Revolution That Can Solve
-            </h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-[#4A3F35]/70 max-w-3xl mx-auto"
-            >
-              100 BILLION LIVES have been sacrificed so far, All because Life couldn't keep up with the Truth.
-            </motion.p>
-          </motion.div>
-
-          <FloatingProblems />
-        </div>
+      {/* Problems We Solve Section */}
+      <section>
+        <ProblemsWeSolve />
+      </section>
+      
+      {/* Knowledge Circle Section */}
+      <section>
+        <KnowledgeCircle />
       </section>
 
       {/* Key Concepts Section */}
