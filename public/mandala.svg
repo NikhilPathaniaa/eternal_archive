@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="mandalaGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#2E5EAA;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#6C4AA1;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Outer circles -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="#2E5EAA" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="160" fill="none" stroke="#2E5EAA" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#2E5EAA" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Flower of Life pattern -->
+  <g opacity="0.4">
+    <circle cx="200" cy="80" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="200" cy="320" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="80" cy="200" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="320" cy="200" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="134.64" cy="134.64" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="265.36" cy="134.64" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="134.64" cy="265.36" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+    <circle cx="265.36" cy="265.36" r="40" fill="none" stroke="#2E5EAA" stroke-width="1"/>
+  </g>
+  
+  <!-- Inner circles -->
+  <circle cx="200" cy="200" r="100" fill="none" stroke="#6C4AA1" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="80" fill="none" stroke="#6C4AA1" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="60" fill="none" stroke="#6C4AA1" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="40" fill="none" stroke="#6C4AA1" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="200" r="20" fill="none" stroke="#6C4AA1" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Geometric lines -->
+  <g stroke="#C7A945" stroke-width="0.5" opacity="0.2">
+    <line x1="200" y1="20" x2="200" y2="380"/>
+    <line x1="20" y1="200" x2="380" y2="200"/>
+    <line x1="60" y1="60" x2="340" y2="340"/>
+    <line x1="340" y1="60" x2="60" y2="340"/>
+  </g>
+</svg>

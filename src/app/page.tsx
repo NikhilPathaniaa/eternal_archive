@@ -1,65 +1,82 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, Heart } from "lucide-react";
+import FloatingSymbols from "@/components/FloatingSymbols";
+import SacredGeometryBackground from "@/components/SacredGeometryBackground";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className=" bg-white">
+              <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <SacredGeometryBackground />
+        <FloatingSymbols />
+        
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-28 text-left md:text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-heading text-4xl md:text-6xl font-bold text-[#4A3F35] mb-5 leading-tight tracking-tight"
+            >
+              Eternal Archive
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-[#4A3F35]/85 mb-6 max-w-3xl md:mx-auto leading-relaxed"
+            >
+              To learn our historic truth and bring back peace, love, and preservation in our Universe.
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-base md:text-lg text-[#4A3F35]/70 mb-10 max-w-2xl md:mx-auto"
+            >
+              To prevent unnecessary suffering accumulated due to lack of spiritual guidance to our ancestors.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-3 justify-start md:justify-center"
+            >
+              <Link href="/learn">
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[#2E5EAA] text-white px-7 py-3.5 rounded-xl font-semibold text-base md:text-lg flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+                >
+                  Begin Journey
+                  <ArrowRight size={20} />
+                </motion.button>
+              </Link>
+              <Link href="/support">
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[#FDF5D8] text-[#4A3F35] px-7 py-3.5 rounded-xl font-semibold text-base md:text-lg flex items-center gap-2 shadow-md hover:shadow-lg transition-all border border-[#C7A945]/40"
+                >
+                  Support Us
+                  <Heart size={20} />
+                </motion.button>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
+      </section>
+
       </main>
-    </div>
   );
 }
