@@ -1,91 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Heart, Lightbulb, Brain, Scale, PawPrint, Zap, Target, AlertTriangle, Video, Sparkles, Mail, Phone, Instagram } from "lucide-react";
-import FloatingSymbols from "@/components/FloatingSymbols";
-import SacredGeometryBackground from "@/components/SacredGeometryBackground";
-import FloatingProblems from "@/components/FloatingProblems";
 import CreativeBackground from "@/components/CreativeBackground";
-import Link from "next/link";
-import ProblemsWeSolve from "@/components/ProblemsWeSolve";
+import Hero1 from "@/components/Hero1";
+import HeroSection from "@/components/HeroSection";
 import KnowledgeCircle from "@/components/KnowledgeCircle";
+import ProblemsWeSolve from "@/components/ProblemsWeSolve";
+import CinematicStorySection from "@/components/sections/CinematicStorySection";
+import CornerUniverseSection from "@/components/sections/CornerUniverseSection";
+import CosmicSection from "@/components/sections/CosmicSection";
+import DiagonalSection from "@/components/sections/DiagonalSection";
+import FloatingBlocksSection from "@/components/sections/FloatingBlocksSection";
+import GoldenVedicSection from "@/components/sections/GoldenVedicSection";
+import ScienceDivineSection from "@/components/sections/ScienceDivineSection";
+import SplitScreenSection from "@/components/sections/SplitScreenSection";
+import ValuePropositionSection from "@/components/ValuePropositionSection";
+import { motion } from "framer-motion";
+import { AlertTriangle, Heart, Instagram, Mail, Phone, Sparkles, Target, Video } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <SacredGeometryBackground />
-        <CreativeBackground />
-        <FloatingSymbols />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold text-[#4A3F35] mb-8 leading-tight"
-            >
-              A Knowledge Revolution
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="text-xl md:text-2xl text-[#2E5EAA] font-semibold mb-12 max-w-2xl mx-auto"
-            >
-              Bridging Ancient Vedic Wisdom with Modern Science
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link href="/learn">
-                <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-[#2E5EAA] text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
-                >
-                  Begin Journey
-                  <ArrowRight size={20} />
-                </motion.button>
-              </Link>
-              <Link href="/support">
-                <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-[#FDF5D8] text-[#4A3F35] px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all border-2 border-[#C7A945]/40"
-                >
-                  Support Us
-                  <Heart size={20} />
-                </motion.button>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
+      <HeroSection />
+      {/* <Hero1 /> */}
+      <section>
+        <ValuePropositionSection/>
       </section>
-      
+      <section>
+        <CinematicStorySection />
+        <CosmicSection />
+        <ScienceDivineSection />
+        <GoldenVedicSection />
+        <SplitScreenSection />
+        <FloatingBlocksSection />
+        <DiagonalSection />
+        <CornerUniverseSection />
+      </section>
       {/* Problems We Solve Section */}
       <section>
-        <ProblemsWeSolve />
+        {/* <ProblemsWeSolve /> */}
       </section>
       
       {/* Knowledge Circle Section */}
       <section>
-        <KnowledgeCircle />
+        {/* <KnowledgeCircle /> */}
       </section>
 
       {/* Urgency Section */}
-      <section className="relative py-20 px-6 bg-gradient-to-b from-[#FDF5D8]/40 to-red-50 overflow-hidden">
+      {/* <section className="relative py-20 px-6 bg-gradient-to-b from-[#FDF5D8]/40 to-red-50 overflow-hidden">
         <CreativeBackground />
         <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div
@@ -151,10 +113,10 @@ export default function Home() {
             </h3>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Plan of Action Section */}
-      <section className="relative py-20 px-6 bg-white overflow-hidden">
+      {/* <section className="relative py-20 px-6 bg-white overflow-hidden">
         <CreativeBackground />
         <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div
@@ -235,10 +197,10 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Project Good Karma Section */}
-      <section className="relative py-20 px-6 bg-gradient-to-b from-white to-[#FDF5D8]/30 overflow-hidden">
+      {/* <section className="relative py-20 px-6 bg-linear-to-b from-white to-[#FDF5D8]/30 overflow-hidden">
         <CreativeBackground />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div
@@ -258,7 +220,7 @@ export default function Home() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className="relative py-20 px-6 bg-[#4A3F35] text-white">
